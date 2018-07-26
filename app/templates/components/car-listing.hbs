@@ -1,53 +1,33 @@
 <div class="col-sm-12">
     <div class="card">
       <div class="card-body bg-light">
-        <a class="image">
-          <img src="{{car.image}}" alt="" style="height: 300px; width: 300px; object-fit: contain;">
-        </a>
         <h3>{{car.title}}</h3>
         <div>
+        <img src="{{car.image}}" alt="" style="height: 200px; width: 300px; object-fit: contain;">
+        </div>
+        <div class="m-1">
         <a href="#" class="btn btn-info">Detail</a>
         <a href="#" class="btn btn-primary">Edit</a>
         <a href="#" class="btn btn-danger">Remove</a>
         </div>
-        <div class="detail brand">
-          <span>Brand:</span> {{car.brand}}
-        </div>
-        <div class="detail model">
-          <span>Model:</span> {{car.model}}
-        </div>
-        <div class="detail engine">
-          <span>Engine:</span> {{car.engine}}
-        </div>
-        <div class="detail power">
-          <span>Power:</span> {{car.power}}
-        </div>
-        <div class="detail doors">
-          <span>Doors:</span> {{car.doors}}
-        </div>
-        <div class="detail colors">
-          <span>Color:</span> {{car.colors}}
-        </div>
-        <div class="detail drive-wheel">
-          <span>Drive wheel:</span> {{car.drive_wheel}}
-        </div>
-        <div class="detail category">
-          <span>Category:</span> {{car.category}}
-        </div>
-        <div class="detail price">
-          <span>Price:</span> {{car.price}}
-        </div>
-        <div class="detail quantity">
-          <span>Quantity:</span> {{car.quantity}}
-        </div>
-        <div class="detail city">
-          <span>City:</span> {{car.city}}
-        </div>
-        <div class="detail address">
-          <span>Address:</span> {{car.address}}
-        </div>
-        <div class="detail description">
-          <span>Description:</span> {{car.description}}
+        <div class="card w-100">
+          <div class="card-header">
+            Car
+          </div>
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item"><span>Brand:</span> {{car.brand}}</li>
+            <li class="list-group-item"><span>Model:</span> {{car.model}}</li>
+            <li class="list-group-item"><span>Engine:</span> {{car.engine}}</li>
+            <li class="list-group-item"><span>Power:</span> {{car.power}}</li>
+            <li class="list-group-item"><span>Doors:</span> {{car.doors}}</li>
+            <li class="list-group-item"><span>Color:</span> {{car.colors}}</li>
+            <li class="list-group-item"><span>Drive wheel:</span> {{car.drive_wheel}}</li>
+            <li class="list-group-item"><span>Category:</span> {{car.category}}</li>
+            <li class="list-group-item"><span>Price:</span> {{car.price}}</li>
+            <li class="list-group-item"> <span>City:</span> {{car.city}}</li>
+            <li class="list-group-item"><span>Address:</span> {{car.address}}</li>
+            <li class="list-group-item">{{car.description}}</li>
+          </ul>
         </div>
       </div>
     </div>
