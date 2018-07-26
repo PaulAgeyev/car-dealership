@@ -1,7 +1,5 @@
-<div class="cars">
-  {{#each model as |rental|}}
-    <article class="listing">
-      <h3>{{rental.title}}</h3>
-    </article>
+<div class="row">
+  {{#each model as |carUnit|}}
+    {{car-listing car=carUnit}}
   {{/each}}
 </div>

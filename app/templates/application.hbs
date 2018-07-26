@@ -1,20 +1,39 @@
-<div class="container">
-  <div class="nav-bar">
-    {{#link-to 'index'}}
-      <h1>
-        <em>SuperRentals</em>
-      </h1>
-    {{/link-to}}
-    <div>
-      {{#link-to 'about'}}
-        About
-      {{/link-to}}
-      {{#link-to 'contact'}}
-        Contact
-      {{/link-to}}
-    </div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="navbar-brand">Car Dealership</div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        {{#link-to 'index' class="nav-link"}}
+          Cars
+        {{/link-to}}
+      </li>
+      <li class="nav-item">
+        {{#link-to 'about' class="nav-link"}}
+          About
+        {{/link-to}}
+      </li>
+      <li class="nav-item">
+        {{#link-to 'contact' class="nav-link"}}
+          Contact
+        {{/link-to}}
+      </li>
+    </ul>
+    <span class="navbar-text">
+      <button type="button" class="btn btn-success">Add a new car</button>
+    </span>
   </div>
-  <div>
-    {{outlet}}
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="body">
+        {{outlet}}
+      </div>
+    </div>
   </div>
 </div>

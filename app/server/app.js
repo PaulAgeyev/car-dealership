@@ -60,8 +60,8 @@ const data = {
     quantity: 5,
     city: 'Chicago',
     address: 'Freedom Salt 12',
-    image: 'https://www.ultimatespecs.com/includes/image.php?id=7769&width=400',
-    description: "The BMW X6 is a mid-size luxury crossover by German automaker BMW"
+    image: 'https://www.bmwusa.com/content/dam/bmwusa/XModels/X6/2018/BMW_MY18_XSeries_X6_DP_Design_01.png',
+    description: "The BMW X6 is a mid-size luxury crossover by German automaker BMW.  It was first shown in 2001 at the North American International Auto Show. "
   }, {
     id: 'porsche-911',
     title: 'Porsche 911',
