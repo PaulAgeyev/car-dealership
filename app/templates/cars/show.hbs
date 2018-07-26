@@ -1,0 +1,28 @@
+<div>
+  {{#link-to "cars" class="btn btn-dark"}}Back{{/link-to}}
+</div>
+<div class="row align-items-center justify-content-center">
+<div>
+  <img src="{{model.image}}" alt="" style="height: 600px; width: 600px; object-fit: contain;">
+</div>
+</div>
+<h3>{{car-title-type model.brand model.model}}</h3>
+<div class="card w-100">
+  <div class="card-header">
+    Car
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><span>Brand:</span> {{model.brand}}</li>
+    <li class="list-group-item"><span>Model:</span> {{model.model}}</li>
+    <li class="list-group-item"><span>Engine:</span> {{model.engine}}</li>
+    <li class="list-group-item"><span>Power:</span> {{model.power}}</li>
+    <li class="list-group-item"><span>Doors:</span> {{model.doors}}</li>
+    <li class="list-group-item"><span>Color:</span> {{model.colors}}</li>
+    <li class="list-group-item"><span>Drive wheel:</span> {{model.drive_wheel}}</li>
+    <li class="list-group-item"><span>Category:</span> {{model.category}}</li>
+    <li class="list-group-item"><span>Price:</span> {{model.price}}</li>
+    <li class="list-group-item"> <span>City:</span> {{model.city}}</li>
+    <li class="list-group-item"><span>Address:</span> {{model.address}}</li>
+    <li class="list-group-item">{{model.description}}</li>
+  </ul>
+</div>
