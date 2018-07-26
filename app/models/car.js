@@ -1,5 +1,4 @@
 export default DS.Model.extend({
-  title:  DS.attr(),
   brand:  DS.attr(),
   model:  DS.attr(),
   engine:  DS.attr(),

@@ -26,7 +26,6 @@ app.use(bodyParser.json());
 const data = {
   "car": [{
     id: 'mazda-rx-8',
-    title: 'Mazda RX-8',
     brand: 'Mazda',
     model: 'RX-8',
     year: '2012',
@@ -46,7 +45,6 @@ const data = {
     "like its predecessors in the RX range, it is powered by a Wankel engine. The RX-8 began North American sales in the 2003 model year."
   }, {
     id: 'bmw-x-6',
-    title: 'BMW X6',
     brand: 'BMW',
     model: 'X6',
     year: '2017',
@@ -65,7 +63,6 @@ const data = {
     " It was first shown in 2001 at the North American International Auto Show. high performance rear-engined classic German sports"
   }, {
     id: 'porsche-911',
-    title: 'Porsche 911',
     brand: 'Porsche',
     model: '911',
     engine: '3.8',
@@ -88,7 +85,7 @@ const data = {
 app.get('/api/cars', function(req, res) {
   if(req.query.brand !== undefined) {
     let car = data.car.filter(function(i) {
-      return i.car.toLowerCase().indexOf(req.query.car.toLowerCase()) !== -1;
+      return i.brand.toLowerCase().startsWith(req.query.brand.toLowerCase());
     });
     res.send({car: car});
   } else {
