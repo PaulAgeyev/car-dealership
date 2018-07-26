@@ -79,7 +79,8 @@ const data = {
     address: 'Green Park 212',
     image: 'https://st.motortrend.com/uploads/sites/5/2017/05/2018-Porsche-911-Carrera-4-GTS-rear-three-quarer.jpg',
     description: "The Porsche 911 (pronounced Nine Eleven or in German: Neunelfer) is a two-door," +
-    " 2+2 high performance rear-engined classic German sports car made since 1963"}
+    " 2+2 high performance rear-engined classic German sports car made since 1963"
+  }
   ]
 };
 
@@ -88,7 +89,6 @@ app.get('/api/cars', function(req, res) {
     let car = data.car.filter(function(i) {
       return i.car.toLowerCase().indexOf(req.query.car.toLowerCase()) !== -1;
     });
-
     res.send({car: car});
   } else {
     res.send(data);
