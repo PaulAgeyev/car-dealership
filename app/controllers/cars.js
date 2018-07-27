@@ -9,23 +9,23 @@ export default Ember.Controller.extend({
         return this.get('store').findAll('car');
       }
     },
-    submit() {
+    addItem(item) {
       let car = this.get('store').createRecord('car', {
-        id: this.get('id'),
-        brand: this.get('brand'),
-        model: this.get('model'),
-        engine: this.get('engine'),
-        power: this.get('power'),
-        doors: this.get('doors'),
-        colors: this.get('colors'),
-        drive_wheel: this.get('drive_wheel'),
-        category: this.get('category'),
-        price: this.get('price'),
-        quantity: this.get('quantity'),
-        city: this.get('city'),
-        address: this.get('address'),
-        image: this.get('image'),
-        description: this.get('description'),
+        id: item.id,
+        brand: item.brand,
+        model: item.model,
+        engine: item.engine,
+        power: item.power,
+        doors: item.doors,
+        colors: item.colors,
+        drive_wheel: item.drive_wheel,
+        category: item.category,
+        price: item.price,
+        quantity: item.quantity,
+        city: item.city,
+        address: item.address,
+        image: item.image,
+        description: item.description,
       });
       car.save();
     },
