@@ -36,14 +36,14 @@ export default Ember.Controller.extend({
     },
     editItem(item) {
       console.log(item.get('brand'));
-      this.get('store').findRecord('car', item.id).then(function(car) {
+      this.get('store').findRecord('car', item.id).then(function (car) {
         car.set('brand', item.get('brand'));
         car.set('model', item.get('model'));
         car.set('engine', item.get('engine'));
         car.set('power', item.get('power'));
         car.set('doors', item.get('doors'));
         car.set('colors', item.get('colors'));
-        car.set('drive_wheel',item.get('drive_wheel'));
+        car.set('drive_wheel', item.get('drive_wheel'));
         car.set('category', item.get('category'));
         car.set('price', item.get('price'));
         car.set('quantity', item.get('quantity'));

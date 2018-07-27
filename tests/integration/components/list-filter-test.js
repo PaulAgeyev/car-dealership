@@ -1,4 +1,4 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import {moduleForComponent, test} from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import wait from 'ember-test-helpers/wait';
 import RSVP from 'rsvp';
@@ -31,8 +31,6 @@ test('should initially load all listings', function (assert) {
     {{/list-filter}}
   `);
 
-  // the wait function will return a promise that will wait for all promises
-  // and xhr requests to resolve before running the contents of the then block.
   return wait().then(() => {
     assert.equal(this.$('.brand').length, 3);
     assert.equal(this.$('.brand').first().text().trim(), 'Mazda');
@@ -60,9 +58,7 @@ test('should update with matching listings', function (assert) {
     {{/list-filter}}
   `);
 
-  // The keyup event here should invoke an action that will cause the list to be filtered
   this.$('.list-filter input').val('M').keyup();
-
   return wait().then(() => {
     assert.equal(this.$('.brand').length, 1);
     assert.equal(this.$('.brand').text().trim(), 'Mazda');

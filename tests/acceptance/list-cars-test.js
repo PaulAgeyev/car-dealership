@@ -1,11 +1,11 @@
-import { test } from 'qunit';
+import {test} from 'qunit';
 import moduleForAcceptance from 'car-dealership/tests/helpers/module-for-acceptance';
 
 moduleForAcceptance('Acceptance | list cars');
 
 test('should redirect to cars route', function (assert) {
   visit('/');
-  andThen(function() {
+  andThen(function () {
     assert.equal(currentURL(), '/cars', 'should redirect automatically');
   });
 });
@@ -44,9 +44,17 @@ test('should filter the list of cars by brand.', function (assert) {
 
 test('should show details for a specific car', function (assert) {
   visit('/cars');
-  click('#ember530');
-  andThen(function() {
+  click('div.col-sm-12 > div > div > div.m-1 > .detail');
+  andThen(function () {
     assert.equal(currentURL(), '/cars/mazda-rx-8', 'should navigate to show route');
     assert.equal(find('h3').text(), "Mazda RX-8", 'should list car title');
+  });
+});
+
+test('should remove a first car.', function (assert) {
+  visit('/');
+  click('div.col-sm-12 > div > div > div.m-1 > button.btn.btn-danger');
+  andThen(function () {
+    assert.equal(find('.listing').length, 2, 'should see 3 listings');
   });
 });
