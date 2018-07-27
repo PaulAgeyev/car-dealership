@@ -3,7 +3,7 @@
 <div class="col-sm-12">
     <div class="card">
       <div class="card-body bg-light">
-        <h3>{{car-title-type car.brand car.model}}</h3>
+        <h3 class="car-title">{{car-title-type car.brand car.model}}</h3>
         <div>
         <img src="{{car.image}}" alt="" style="height: 200px; width: 300px; object-fit: contain;">
         </div>
@@ -16,7 +16,7 @@
           <div class="card-header">
             Car
           </div>
-          <ul class="list-group list-group-flush ">
+          <ul class="list-group list-group-flush">
             <li class="list-group-item"><span>Brand:</span> {{car.brand}}</li>
             <li class="list-group-item"><span>Model:</span> {{car.model}}</li>
             <li class="list-group-item"><span>Engine:</span> {{car.engine}}</li>

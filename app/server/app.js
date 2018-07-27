@@ -1,3 +1,5 @@
+/* jshint node: true */
+
 const express = require('express');
 const app = express();
 

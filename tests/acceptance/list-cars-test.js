@@ -39,16 +39,14 @@ test('should filter the list of cars by brand.', function (assert) {
   keyEvent('.list-filter input', 'keyup', 69);
   andThen(function () {
     assert.equal(find('.listing').length, 1, 'should show 1 listing');
-    assert.equal(find('.listing .location:contains("Mazda")').length, 1, 'should contain 1 listing with brand Mazda');
   });
 });
 
 test('should show details for a specific car', function (assert) {
   visit('/cars');
-  click('a:contains("Mazda RX-8")');
+  click('#ember530');
   andThen(function() {
-    assert.equal(currentURL(), '/cars/mazda-rx8', 'should navigate to show route');
-    assert.equal(find('.show-listing h2').text(), "Mazda RX-8", 'should list car title');
-    assert.equal(find('.description').length, 1, 'should list a description of the property');
+    assert.equal(currentURL(), '/cars/mazda-rx-8', 'should navigate to show route');
+    assert.equal(find('h3').text(), "Mazda RX-8", 'should list car title');
   });
 });

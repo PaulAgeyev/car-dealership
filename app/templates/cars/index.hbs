@@ -2,9 +2,9 @@
 
 <button type="button" class="btn btn-success float-right m-2" data-toggle="modal" data-target="#myModal">Add a new car</button>
 
-{{#list-filter filter=(action 'filterByBrand') as |cars|}}
+{{#list-filter class="list-filter" filter=(action 'filterByBrand') as |cars|}}
   {{#each cars as |carUnit|}}
-    <div class="m-2">
+    <div class="m-2 listing">
       {{car-listing car=carUnit removeItem=(action 'removeItem') editItem=(action 'editItem')}}
     </div>
   {{/each}}
